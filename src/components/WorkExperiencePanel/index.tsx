@@ -1,5 +1,10 @@
 import React from "react";
-import { FrostedPanel, Heading1, Paragraph } from "../../shared/components";
+import {
+  FrostedPanel,
+  Heading1,
+  JustifiedDiv,
+  Paragraph
+} from "../../shared/components";
 import workExperienceData from "../../shared/data/workExperience.json";
 
 function WorkExperiencePanel({ flex }: { flex?: string }) {
@@ -8,11 +13,13 @@ function WorkExperiencePanel({ flex }: { flex?: string }) {
       <Heading1>Work Experience</Heading1>
       {workExperienceData.map((project, i) => {
         return (
-          <div key={project.heading}>
+          <JustifiedDiv key={project.heading}>
             <Paragraph>
-              <strong>{project.heading}</strong> - in my role as{" "}
-              <em>{project.as}</em> at <em>{project.at}</em> -{" "}
-              {project.description}
+              <strong>{project.heading}</strong> (
+              <em>
+                {project.as}, {project.at}
+              </em>
+              ) - {project.description}
               <br />
               <strong>Technologies used</strong>:{" "}
               {project.technologies.map(
@@ -20,7 +27,7 @@ function WorkExperiencePanel({ flex }: { flex?: string }) {
                   technology + (j < project.technologies.length - 1 ? ", " : "")
               )}
             </Paragraph>
-          </div>
+          </JustifiedDiv>
         );
       })}
     </FrostedPanel>

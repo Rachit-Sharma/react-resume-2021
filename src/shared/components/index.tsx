@@ -142,6 +142,10 @@ const Photograph = styled.img`
   height: 10rem;
 `;
 
+const JustifiedDiv = styled.div`
+  text-align: justify;
+`;
+
 const Paragraph = styled.p`
   font-size: 1.2rem;
 `;
@@ -203,6 +207,7 @@ export {
   Heading1,
   Heading2,
   Photograph,
+  JustifiedDiv,
   Paragraph,
   ExternalLink,
   VerticalRule,
