@@ -2,7 +2,7 @@
 
 This repository contains a Single Page Web Application created using TypeScript + React with styled-components, which produces my resume for printing. Since the primary motivation for this project is for the resume to look good printed, it may not look best on all displays. That being said, the best way to use the application produced by this repo is through a webkit based browser (eg.- Chrome, Brave, Edge).
 
-Webkit based browsers allow for a blur effect on some panels (unfortunately, this is currently not supported in print), and are able to print the background images and color gradients without requiring the users to change the browser settings at their end.
+Webkit based browsers allow for a blur effect on some panels (unfortunately, this is currently not supported in print), and are able to print the background images and colors without requiring the users to change the browser settings at their end.
 
 ## How to Use
 
@@ -22,7 +22,7 @@ Populate the files with data conforming to the following structures:
 
 ### personal.json
 
-`{ "name": "", "profile": "", "phone": "", "email": "", "linkedIn": "", "image": "" }`
+`{ "name": "", "profile": "", "phone": "", "email": "", "linkedIn": "", "image": "<URI to your image>" }`
 
 ### projects.json
 
@@ -40,4 +40,4 @@ The `repository` field is optional
 
 Finally, run `npm start`.
 
-Please note that the formatting is tweaked to suit my data files, and print my data in a single page, so your mileage may vary.
+Please note that the formatting is tweaked to suit my data files, and to print my data in a single page, so your mileage may vary.

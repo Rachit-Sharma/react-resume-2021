@@ -30,6 +30,9 @@ interface CoordinateProps {
 }
 
 const DecorativeBox = styled.div<CoordinateProps>`
+  @media print {
+    ${/AppleWebKit/i.test(window.navigator.userAgent) ? "" : "display: none;"}
+  }
   position: absolute;
   ${props => {
     let cssRules = "";
