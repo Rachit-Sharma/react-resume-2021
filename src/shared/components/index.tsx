@@ -130,10 +130,23 @@ const Heading1 = styled.h1`
   line-height: 1;
 `;
 
-const Heading2 = styled.h2`
-  margin: 0.2rem;
+const H2Styling = css`
   font-size: 1.5rem;
   line-height: 1;
+`;
+
+const Heading2 = styled.h2`
+  ${H2Styling}
+  margin: 0.2rem;
+`;
+
+const ExternalLink = styled.a`
+  font-size: 1.2rem;
+  color: inherit;
+`;
+
+const H2Link = styled(ExternalLink)`
+  ${H2Styling}
 `;
 
 const Photograph = styled.img`
@@ -148,11 +161,6 @@ const JustifiedDiv = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1.2rem;
-`;
-
-const ExternalLink = styled.a`
-  font-size: 1.2rem;
-  color: inherit;
 `;
 
 const VerticalRule = styled.div`
@@ -206,10 +214,11 @@ export {
   FlexibleContainer,
   Heading1,
   Heading2,
+  ExternalLink,
+  H2Link,
   Photograph,
   JustifiedDiv,
   Paragraph,
-  ExternalLink,
   VerticalRule,
   WrappingDiv,
   TableWrapper,
