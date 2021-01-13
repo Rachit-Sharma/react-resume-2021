@@ -3,7 +3,8 @@ import {
   FrostedPanel,
   Heading1,
   JustifiedDiv,
-  Paragraph
+  Paragraph,
+  Point
 } from "../../shared/components";
 import workExperienceData from "../../shared/data/workExperience.json";
 
@@ -19,8 +20,10 @@ function WorkExperiencePanel({ flex }: { flex?: string }) {
               <em>
                 {project.as}, {project.at}
               </em>
-              ) - {project.description}
-              <br />
+              ) -<br />
+              {project.description.map((point: string) => (
+                <Point>{point}</Point>
+              ))}
               <strong>Technologies used</strong>:{" "}
               {project.technologies.map(
                 (technology, j) =>

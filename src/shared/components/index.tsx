@@ -80,7 +80,7 @@ const DecorativeBox = styled.div<CoordinateProps>`
 
 const FrostedPanel = styled.div`
   ${({ flex }: { flex?: string }) => (flex ? `flex: ${flex};` : "")};
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   ${panelShadowMixin}
   background-color: rgba(220, 220, 220, 0.8);
@@ -93,7 +93,7 @@ const FlexRow = styled.div`
   justify-content: space-between;
 
   & > :not(:last-child) {
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 `;
 
@@ -103,7 +103,7 @@ const FlexCol = styled.div`
   justify-content: space-between;
 
   & > :not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -113,7 +113,7 @@ const BaseCol = styled(FlexCol)`
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 3rem;
+  padding: 2rem;
   overflow: auto;
 `;
 
@@ -152,7 +152,7 @@ const H2Link = styled(ExternalLink)`
 const Photograph = styled.img`
   margin: 1rem;
   border-radius: 1rem;
-  height: 10rem;
+  height: 9rem;
 `;
 
 const JustifiedDiv = styled.div`
@@ -161,6 +161,18 @@ const JustifiedDiv = styled.div`
 
 const Paragraph = styled.p`
   font-size: 1.2rem;
+`;
+
+const Point = styled.li`
+  position: relative;
+  list-style: none;
+  margin-left: 2rem;
+
+  &::before {
+    position: absolute;
+    content: "↠";
+    margin-left: -1.25rem;
+  }
 `;
 
 const VerticalRule = styled.div`
@@ -178,19 +190,20 @@ const Table = styled.table`
   min-width: 100%;
   border: 1px solid currentColor;
   border-spacing: 0;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   font-size: 1.2rem;
   overflow: hidden;
 
   thead {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-bottom: 1px solid currentColor;
     background-color: var(--highlight-color-primary);
   }
 
   th,
   td {
-    padding: 1rem;
+    padding: 0.5rem;
+    text-align: center;
 
     &:not(:last-child) {
       border-right: 1px solid currentColor;
@@ -219,6 +232,7 @@ export {
   Photograph,
   JustifiedDiv,
   Paragraph,
+  Point,
   VerticalRule,
   WrappingDiv,
   TableWrapper,

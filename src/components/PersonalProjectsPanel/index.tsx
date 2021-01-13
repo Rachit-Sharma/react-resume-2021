@@ -3,7 +3,8 @@ import {
   ExternalLink,
   FrostedPanel,
   Heading1,
-  Paragraph
+  Paragraph,
+  Point
 } from "../../shared/components";
 import personalProjects from "../../shared/data/projects.json";
 
@@ -15,8 +16,10 @@ function PersonalProjectPanel({ flex }: { flex?: string }) {
         return (
           <div key={project.heading}>
             <Paragraph>
-              <strong>{project.heading}</strong> - {project.description}
-              <br />
+              <strong>{project.heading}</strong> -<br />
+              {project.description.map((point: string) => (
+                <Point>{point}</Point>
+              ))}
               {project.repository ? (
                 <Fragment>
                   <strong>Repository</strong>:{" "}
